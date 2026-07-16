@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+<<<<<<< HEAD
         <script>
             window.Laravel = {
                 reverb: {
@@ -22,6 +23,8 @@
             };
         </script>
 
+=======
+>>>>>>> 8d654fd50fd5611c4ef05a01dc141414a821a1f3
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>

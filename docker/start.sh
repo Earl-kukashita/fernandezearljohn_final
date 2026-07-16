@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 start.sh
 1
 100%
@@ -20,3 +21,17 @@ php artisan optimize || true
 # from the browser for WebSockets.
 
 exec apache2-foreground
+=======
+set -e
+
+PORT_TO_USE=${PORT:-80}
+sed -i "s/Listen 80/Listen ${PORT_TO_USE}/" /etc/apache2/ports.conf
+sed -i "s/:80/:${PORT_TO_USE}/" /etc/apache2/sites-available/000-default.conf
+
+php artisan storage:link || true
+php artisan db:seed  || true
+php artisan migrate --force || true
+php artisan optimize || true
+
+apache2-foreground
+>>>>>>> 8d654fd50fd5611c4ef05a01dc141414a821a1f3
